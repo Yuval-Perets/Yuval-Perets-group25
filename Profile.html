@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - פרופיל</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+      <div class="profile-actions">
+        <span>שלום, ישראל ישראלי</span>
+        <button class="btn ghost" onclick="logout()">התנתק</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="profile-container">
+    <div class="container">
+      <section class="profile-info">
+        <h1>הפרופיל שלי</h1>
+        <div class="info-grid">
+          <div>
+            <h3>שם מלא</h3>
+            <p>ישראל ישראלי</p>
+          </div>
+          <div>
+            <h3>דואר אלקטרוני</h3>
+            <p>israel@email.com</p>
+          </div>
+          <div>
+            <h3>טלפון</h3>
+            <p>050-1234567</p>
+          </div>
+        </div>
+        <button class="btn outline">ערוך פרטים</button>
+      </section>
+
+      <!-- Upcoming Reservations -->
+      <section class="reservations">
+        <h2>הזמנות עתידיות</h2>
+        <div class="card">
+          <h3>מסעדת השף</h3>
+          <ul>
+            <li>📅 יום שלישי, 26.11.2024</li>
+            <li>🕒 19:30</li>
+            <li>👥 4 סועדים</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn outline danger">בטל הזמנה</button>
+            <button class="btn outline">ערוך הזמנה</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Past Reservations -->
+      <section class="reservations past">
+        <h2>הזמנות קודמות</h2>
+        <div class="card">
+          <h3>מסעדת הים</h3>
+          <div class="rating">
+            ⭐ 4.5
+          </div>
+          <ul>
+            <li>📅 יום ראשון, 10.11.2024</li>
+            <li>🕒 20:00</li>
+            <li>👥 2 סועדים</li>
+          </ul>
+          <button class="btn ghost small">הזמן שוב</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      © 2024 RestEasy. כל הזכויות שמורות.
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
