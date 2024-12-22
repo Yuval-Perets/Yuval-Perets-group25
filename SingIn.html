@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - התחברות והרשמה</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="auth-container">
+    <div class="container grid">
+      <!-- Login Section -->
+      <section class="auth-section">
+        <h2>התחברות</h2>
+        <form class="auth-form">
+          <label>
+            דואר אלקטרוני
+            <input type="email" placeholder="your@email.com">
+          </label>
+          <label>
+            סיסמה
+            <input type="password" placeholder="הקלד את הסיסמה שלך">
+          </label>
+          <div class="checkbox-group">
+            <label>זכור אותי</label>
+            <input type="checkbox">
+          </div>
+          <button type="submit" class="btn">התחבר</button>
+          <div class="text-center">
+            <a href="#" class="link">שכחת סיסמה?</a>
+          </div>
+        </form>
+      </section>
+
+      <!-- Register Section -->
+      <section class="auth-section bg-light">
+        <h2>הרשמה</h2>
+        <form class="auth-form">
+          <label>
+            שם מלא
+            <input type="text" placeholder="הקלד את שמך המלא">
+          </label>
+          <label>
+            דואר אלקטרוני
+            <input type="email" placeholder="your@email.com">
+          </label>
+          <label>
+            מספר טלפון
+            <input type="tel" placeholder="הקלד את מספר הטלפון שלך">
+          </label>
+          <label>
+            סיסמה
+            <input type="password" placeholder="בחר סיסמה">
+          </label>
+          <label>
+            אימות סיסמה
+            <input type="password" placeholder="הקלד את הסיסמה שוב">
+          </label>
+          <div class="checkbox-group">
+            <label>האם אתה מעוניין להירשם כבעל מסעדה?</label>
+            <input type="checkbox">
+          </div>
+          <button type="submit" class="btn primary">הרשם</button>
+          <div class="text-center small-text">
+            בלחיצה על "הרשם" אתה מסכים ל
+            <a href="#" class="link">תנאי השימוש</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      © 2024 RestEasy. כל הזכויות שמורות.
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
