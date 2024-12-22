@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - הזמנה חדשה</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+      <div class="profile-actions">
+        <span>שלום, ישראל ישראלי</span>
+        <button class="btn ghost">התנתק</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="reservation-container">
+    <div class="container">
+      <section class="restaurant-header">
+        <h1>מסעדת השף</h1>
+        <p>📍 רחוב הרצל 123, תל אביב</p>
+      </section>
+
+      <div class="grid">
+        <!-- Reservation Form -->
+        <section class="form-section">
+          <div class="card">
+            <h2>פרטי ההזמנה</h2>
+            <form>
+              <label>
+                תאריך
+                <input type="date" />
+              </label>
+              <label>
+                שעה
+                <input type="time" />
+              </label>
+              <label>
+                מספר סועדים
+                <input type="number" min="1" placeholder="בחר מספר סועדים" />
+              </label>
+              <label>
+                בקשות מיוחדות
+                <textarea placeholder="הוסף הערות או בקשות מיוחדות..."></textarea>
+              </label>
+              <button type="submit" class="btn primary">אשר הזמנה</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Restaurant Info -->
+        <section class="info-section">
+          <div class="card">
+            <h2>פרטי המסעדה</h2>
+            <ul>
+              <li><strong>שעות פעילות:</strong> ראשון - חמישי: 12:00 - 23:00, שישי - שבת: 12:00 - 24:00</li>
+              <li><strong>טלפון:</strong> 03-1234567</li>
+              <li><strong>סוג מטבח:</strong> מטבח ישראלי מודרני</li>
+              <li><strong>חניה:</strong> חניה זמינה ברחוב</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      © 2024 RestEasy. כל הזכויות שמורות.
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
