@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RestEasy - התחברות והרשמה</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="SignIn.css">
 </head>
 <body>
   <!-- Header -->
@@ -18,6 +18,7 @@
   <main class="auth-container">
     <div class="container grid">
       <!-- Login Section -->
+       
       <section class="auth-section">
         <h2>התחברות</h2>
         <form class="auth-form">
@@ -29,14 +30,7 @@
             סיסמה
             <input type="password" placeholder="הקלד את הסיסמה שלך">
           </label>
-          <div class="checkbox-group">
-            <label>זכור אותי</label>
-            <input type="checkbox">
-          </div>
-          <button type="submit" class="btn">התחבר</button>
-          <div class="text-center">
-            <a href="#" class="link">שכחת סיסמה?</a>
-          </div>
+          <button type="button" class="btn" id="submit-button">התחבר</button>
         </form>
       </section>
 
@@ -64,15 +58,10 @@
             אימות סיסמה
             <input type="password" placeholder="הקלד את הסיסמה שוב">
           </label>
-          <div class="checkbox-group">
-            <label>האם אתה מעוניין להירשם כבעל מסעדה?</label>
-            <input type="checkbox">
+          <div >
+            <a href="OwnerSign.html"><label class="checkbox-lable">האם אתה מעוניין להירשם כבעל מסעדה?</label></a>
           </div>
-          <button type="submit" class="btn primary">הרשם</button>
-          <div class="text-center small-text">
-            בלחיצה על "הרשם" אתה מסכים ל
-            <a href="#" class="link">תנאי השימוש</a>
-          </div>
+          <button type="button" class="btn primary" id="signin-button">הרשם</button>
         </form>
       </section>
     </div>
@@ -81,7 +70,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container text-center">
-      © 2024 RestEasy. כל הזכויות שמורות.
+
     </div>
   </footer>
 

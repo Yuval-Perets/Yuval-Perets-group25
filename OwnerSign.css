@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c6ddff, #7eb2ff);
+    text-align: right;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .header {
+    background-color: white;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #68a5ff;
+  }
+
+  .h2-sign{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    font-size: 40px;
+
+  }
+  
+  .auth-container {
+    padding: 64px 0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+  
+  .auth-section {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 0 155px 155px 155px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-light {
+    background-color: #f4faff;
+  }
+  
+  .auth-form label {
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  .auth-form input {
+    width: 96%;
+    height: 2vh;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .checkbox-lable:hover{
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #68a5ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn.primary {
+    background-color: #68a5ff;
+  }
+  
+  .btn:hover {
+    background-color: #247cff;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer {
+    background-color: white;
+    padding: 16px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+  
+  .small-text {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
