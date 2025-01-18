@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select form elements
     const signInForm = document.querySelector('.auth-container .auth-section:nth-child(1) .auth-form');
     const mailInput = signInForm?.querySelector('input[type="email"]');
     const passInput = signInForm?.querySelector('input[placeholder="הקלד את הסיסמה שלך"]');
@@ -9,16 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = signUpForm?.querySelector('input[type="tel"]');
     const passwordInput = signUpForm?.querySelector('input[placeholder="בחר סיסמה"]');
     const confirmPasswordInput = signUpForm?.querySelector('input[placeholder="הקלד את הסיסמה שוב"]');
+    const ownerSignForm = document.querySelector('.auth-section .auth-form');
+    const restaurantNameInput = ownerSignForm?.querySelector('input[placeholder="הקלד את שם המסעדה "]');
+    const restEmailInput = ownerSignForm?.querySelector('input[type="email"]');
+    const restPhoneInput = ownerSignForm?.querySelector('input[type="tel"]');
+    const restAddressInput = ownerSignForm?.querySelector('input[placeholder="הקלד את כתובת המסעדה"]');
+    const cuisineTypeInput = ownerSignForm?.querySelector('input[placeholder="הקלד את סוג המטבח"]');
+    const restPasswordInput = ownerSignForm?.querySelector('input[placeholder="בחר סיסמה"]');
+    const restConfirmPasswordInput = ownerSignForm?.querySelector('input[placeholder="הקלד את הסיסמה שוב"]');
     const submitButton = document.getElementById("submit-button");
     const signUpButton = document.getElementById("signin-button");
     const signLogButton = document.getElementById("signlog-btn");
+    const restSignButton = document.getElementById("signRest-btn");
     const homeButton = document.getElementById("home-btn");
+    
   
-    // Validation functions
     function validateFullName(fullName) {
       const words = fullName.trim().split(' ');
       return words.length >= 2 && words.every(word => word.length >= 2);
     }
+    
   
     function validateEmail(email) {
       return /^[^@\s]+@[^@\s]+\.com$/.test(email);
@@ -29,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validatePassword(password) {
-        return password.length >= 6; // Example: Password must have at least 6 characters
+        return password.length >= 6; 
       }
   
     function validatePasswords(password, confirmPassword) {
@@ -75,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
               event.preventDefault();
             } else {
               alert('התחברת בהצלחה!');
-              window.location.href = 'Profile.html'; // Navigate to Profile page
+              window.location.href = 'Profile.html'; 
             }
           });
             
@@ -83,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Submit button not found.");
     }
 
-    // Handle sign-up button click
     if (signUpButton) {
       signUpButton.addEventListener('click', (event) => {
         if (!signUpForm) {
@@ -139,18 +147,78 @@ document.addEventListener('DOMContentLoaded', () => {
           event.preventDefault();
         } else {
           alert('נרשמת בהצלחה!');
-          window.location.href = 'Profile.html'; // Navigate to Profile page
+          window.location.href = 'Profile.html'; 
         }
       });
     } else {
       console.error("Sign-up button not found.");
     }
+
+
+    if (restSignButton) {
+        restSignButton.addEventListener('click', (event) => {
+          if (!restSignButton) {
+            console.error("Sign-up form not found.");
+            return;
+          }
+    
+          const restName = restaurantNameInput?.value || '';
+          const restEmail = restEmailInput?.value || '';
+          const restPhone = restPhoneInput?.value || '';
+          const restAdress= restAddressInput?.value || '';
+          const restCuisine= cuisineTypeInput?.value || '';
+          const restPassword = restPasswordInput?.value || '';
+          const restConfirmPassword = restConfirmPasswordInput?.value || '';
+          const restSignFields = [restaurantNameInput, restEmailInput, restPhoneInput, restAddressInput, cuisineTypeInput, restPasswordInput, restConfirmPasswordInput];
+          
+          let isValid = true;
+          let errorMessage = '';
+    
+  
+          if (!areAllFieldsFilled(restSignFields)) {
+              isValid = false;
+              errorMessage += 'יש למלא את כל השדות בטופס.\n';
+            }
+  
+    
+          if (!validateEmail(restEmail)) {
+            isValid = false;
+            errorMessage += 'האימייל חייב להכיל תו @ ולהסתיים ב-.com.\n';
+          }
+    
+          if (!validatePhone(restPhone)) {
+            isValid = false;
+            errorMessage += 'מספר הטלפון חייב להתחיל ב-0 ולהכיל 10 ספרות.\n';
+          }
+
+  
+          if (!validatePassword(restPassword)) {
+              isValid = false;
+              errorMessage += 'הסיסמה חייבת להכיל לפחות 6 תווים.\n';
+            }
+    
+          if (!validatePasswords(restPassword, restConfirmPassword)) {
+            isValid = false;
+            errorMessage += 'הסיסמאות אינן תואמות.\n';
+          }
+    
+          if (!isValid) {
+            alert(errorMessage);
+            event.preventDefault();
+          } else {
+            alert('העסק נרשם בהצלחה!');
+            window.location.href = 'Profile.html';
+          }
+        });
+      } else {
+        console.error("Sign-up button not found.");
+      }
   
    
     if (signLogButton) {
       signLogButton.addEventListener('click', () => {
         console.log("Hey Yuval!");
-        window.location.href = 'SignIn.html'; // Navigate to Sign-in page
+        window.location.href = 'SignIn.html';
       });
     } else {
       console.error("Sign-log button not found.");
@@ -159,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (homeButton) {
         homeButton.addEventListener('click', () => {
           console.log("Hey Yuval!");
-          window.location.href = 'HomePage.html'; // Navigate to Sign-in page
+          window.location.href = 'HomePage.html'; 
         });
       } else {
         console.error("home button not found.");
