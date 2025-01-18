@@ -4,22 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RestEasy - פרופיל</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Profile.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="logo">RestEasy</div>
       <div class="profile-actions">
         <span>שלום, ישראל ישראלי</span>
         <button class="btn ghost" onclick="logout()">התנתק</button>
+        <button type="button" class="btn ghost" id="home-btn">לדף הבית</button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="profile-container">
     <div class="container">
       <section class="profile-info">
@@ -38,10 +37,8 @@
             <p>050-1234567</p>
           </div>
         </div>
-        <button class="btn outline">ערוך פרטים</button>
       </section>
 
-      <!-- Upcoming Reservations -->
       <section class="reservations">
         <h2>הזמנות עתידיות</h2>
         <div class="card">
@@ -58,7 +55,6 @@
         </div>
       </section>
 
-      <!-- Past Reservations -->
       <section class="reservations past">
         <h2>הזמנות קודמות</h2>
         <div class="card">
@@ -77,10 +73,11 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container text-center">
-      © 2024 RestEasy. כל הזכויות שמורות.
+    <div class="container">
+        <h3>קצת עלינו</h3>
+        <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה. בעזרת הפלטפורמה שלנו תוכלו למצוא בקלות את המסעדה המושלמת, לבחור את הזמן שנוח לכם, ולהבטיח את המקום שלכם תוך שניות. המטרה שלנו היא לחבר אנשים עם האוכל שהם אוהבים, במקום שהם אוהבים, בזמן שהם אוהבים!</p>
+      
     </div>
   </footer>
 

@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RestEasy - הזמנה חדשה</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="NewOrder.css">
 </head>
 <body>
-  <!-- Header -->
+
+
   <header class="header">
     <div class="container">
       <div class="logo">RestEasy</div>
@@ -18,27 +19,26 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="reservation-container">
     <div class="container">
       <section class="restaurant-header">
         <h1>מסעדת השף</h1>
-        <p>📍 רחוב הרצל 123, תל אביב</p>
+        <p> רחוב הרצל 123, תל אביב</p>
       </section>
 
       <div class="grid">
-        <!-- Reservation Form -->
         <section class="form-section">
           <div class="card">
             <h2>פרטי ההזמנה</h2>
             <form>
               <label>
                 תאריך
-                <input type="date" />
+                <input type="date" style="direction: rtl; text-align: right;"
+                  />
               </label>
               <label>
                 שעה
-                <input type="time" />
+                <input type="time" style="direction: rtl; text-align: right;" />
               </label>
               <label>
                 מספר סועדים
@@ -53,7 +53,6 @@
           </div>
         </section>
 
-        <!-- Restaurant Info -->
         <section class="info-section">
           <div class="card">
             <h2>פרטי המסעדה</h2>
@@ -69,10 +68,11 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container text-center">
-      © 2024 RestEasy. כל הזכויות שמורות.
+    <div class="container">
+        <h3>קצת עלינו</h3>
+        <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה. בעזרת הפלטפורמה שלנו תוכלו למצוא בקלות את המסעדה המושלמת, לבחור את הזמן שנוח לכם, ולהבטיח את המקום שלכם תוך שניות. המטרה שלנו היא לחבר אנשים עם האוכל שהם אוהבים, במקום שהם אוהבים, בזמן שהם אוהבים!</p>
+      
     </div>
   </footer>
 
