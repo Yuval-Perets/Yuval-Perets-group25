@@ -1,8 +1,11 @@
 RestEasy
 
+
 Overview
 
 RestEasy is a web-based platform designed to streamline restaurant table reservations. It allows users to book tables in advance, view menus, manage reservations, and receive real-time notifications.
+
+
 
 Features
 
@@ -36,6 +39,8 @@ Responsive Design
 
 Supports both desktop and mobile devices.
 
+
+
 Technologies Used
 
 HTML: Structuring the application's web pages.
@@ -44,20 +49,19 @@ CSS: Styling the user interface with responsive design.
 
 JavaScript: Adding interactivity and implementing validation logic.
 
+
+
 File Structure
 
-project-directory
-├── HomePage.html          # Main landing page
-├── SignIn.html            # Login page
-├── OwnerSign.html         # Restaurant owner login page
-├── NewOrder.html          # Reservation creation page
-├── Profile.html           # User profile page
-├── homepage.css           # Styling for the main page
-├── SignIn.css             # Styling for the login page
-├── OwnerSign.css          # Styling for the owner login page
-├── NewOrder.css           # Styling for the reservation page
-├── Profile.css            # Styling for the user profile
-├── scripts.js             # JavaScript file for interactivity and validation
+The project includes the following files:
+
+HTML files: HomePage, SignIn, OwnerSign, NewOrder, Profile.
+
+CSS files: homepage.css, SignIn.css, OwnerSign.css, NewOrder.css, Profile.css.
+
+JavaScript file: scripts.js for interactivity and validation.
+
+
 
 Validation Details
 
@@ -77,6 +81,8 @@ Checks for minimum length of 8 characters.
 
 Encourages inclusion of numbers and special characters.
 
+
+
 How to Use
 
 To start, open the HomePage.html file in any modern web browser.
@@ -89,16 +95,3 @@ Book a table using NewOrder.html.
 
 View or manage your profile in Profile.html.
 
-Future Enhancements
-
-Advanced User Management
-
-Adding profile pictures and password recovery options.
-
-Restaurant Reviews
-
-Users can leave reviews and rate their dining experiences.
-
-Payment Integration
-
-Allow users to pay for their reservations online.
