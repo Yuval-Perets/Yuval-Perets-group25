@@ -77,9 +77,7 @@ Verifies format (e.g., example@domain.com).
 
 Password
 
-Checks for minimum length of 8 characters.
-
-Encourages inclusion of numbers and special characters.
+Checks for minimum length of 6 characters.
 
 
 
