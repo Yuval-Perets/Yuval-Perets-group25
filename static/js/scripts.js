@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return fields.every(field => field.value.trim() !== '');
       }
   
-    if (submitButton) {
+      if (submitButton) {
         submitButton.addEventListener('click', (event) => {
             if (!submitButton) {
               console.error("Submit form not found.");
@@ -59,39 +59,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const mail = mailInput?.value || '';
             const pass = passInput?.value || '';
             const signInFields = [mailInput, passInput];
-
       
             let isValid = true;
             let errorMessage = '';
-
+      
             if (!areAllFieldsFilled(signInFields)) {
                 isValid = false;
                 errorMessage += 'יש למלא את כל השדות בטופס.\n';
-              }
+            }
       
             if (!validateEmail(mail)) {
-              isValid = false;
-              errorMessage += 'האימייל חייב להכיל תו @ ולהסתיים ב-.com.\n';
+                isValid = false;
+                errorMessage += 'האימייל חייב להכיל תו @ ולהסתיים ב-.com.\n';
             }
-
+      
             if (!validatePassword(pass)) {
                 isValid = false;
                 errorMessage += 'הסיסמה חייבת להכיל לפחות 6 תווים.\n';
-              }
+            }
       
             if (!isValid) {
-              alert(errorMessage);
-              event.preventDefault();
+                alert(errorMessage);
+                event.preventDefault();
             } else {
-              alert('התחברת בהצלחה!');
-              window.location.href = 'Profile.html'; 
+                // Removed the success alert to avoid displaying it when the password is wrong.
+                window.location.href = 'Profile.html'; 
             }
-          });
-            
+        });
     } else {
         console.error("Submit button not found.");
     }
-
+    
     if (signUpButton) {
       signUpButton.addEventListener('click', (event) => {
         if (!signUpForm) {
@@ -144,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (!isValid) {
           alert(errorMessage);
-          event.preventDefault();
+          event.eventDefault();
         } else {
           alert('נרשמת בהצלחה!');
           window.location.href = 'Profile.html'; 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RestEasy</title>
-  <link rel="stylesheet" href="HomePage.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/HomePage.css') }}">  
 </head>
 <body>
 
@@ -12,13 +12,17 @@
     <div class="header-container">
       <div class="logo">RestEasy</div>
       <div class="actions">
-        <button type="button" class="btn primary" id="signlog-btn">התחברות / הרשמה</button>
+        {% if user %}
+          <span class="user">שלום, {{ user }}</span>
+          <button type="button" class="btn primary" id="myorders-btn">ההזמנות שלי</button>
+          <button type="button" class="btn primary" id="logout-btn">התנתק</button>
+        {% else %}
+          <button type="button" class="btn primary" id="signlog-btn">התחברות / הרשמה</button>
+        {% endif %}
       </div>
     </div>
   </header>
-
-
-
+  
 
   <section class="hero">
     <div class="container text-center">
@@ -26,55 +30,20 @@
       <p>מצא את המסעדה המושלמת והזמן שולחן במהירות ובקלות</p>
       <div class="search-box">
         <div class="input-group">
-          <input type="text" placeholder="חפש מסעדה..." />
+          <input type="text" id="search-name" placeholder="חפש מסעדה..." />
         </div>
         <div class="input-group">
-          <input type="text" placeholder="אזור" />
+          <input type="text" id="search-location" placeholder="אזור" />
         </div>
-        <button class="btn full">חפש</button>
-      </div>
+        <button class="btn full" id="search-btn">חפש</button>
+      </div>      
     </div>
   </section>
-
 
   <section class="popular-restaurants">
     <div class="container">
       <h2>מסעדות מומלצות</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="image-placeholder">🍽️</div>
-          <div class="content">
-            <h3>מסעדה 1</h3>
-            <p>מטבח ישראלי • תל אביב</p>
-            <div class="card-footer">
-              <span>⭐ 4.5</span>
-              <button class="btn outline">הזמן שולחן</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-placeholder">🍽️</div>
-          <div class="content">
-            <h3>מסעדה 2</h3>
-            <p>מטבח ישראלי • תל אביב</p>
-            <div class="card-footer">
-              <span>⭐ 4.5</span>
-              <button class="btn outline">הזמן שולחן</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-placeholder">🍽️</div>
-          <div class="content">
-            <h3>מסעדה 3</h3>
-            <p>מטבח ישראלי • תל אביב</p>
-            <div class="card-footer">
-              <span>⭐ 4.5</span>
-              <button class="btn outline">הזמן שולחן</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="cards"></div>  <!-- Cards will be dynamically inserted here -->
     </div>
   </section>
 
@@ -102,10 +71,9 @@
     <div class="container">
         <h3>קצת עלינו</h3>
         <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה. בעזרת הפלטפורמה שלנו תוכלו למצוא בקלות את המסעדה המושלמת, לבחור את הזמן שנוח לכם, ולהבטיח את המקום שלכם תוך שניות. המטרה שלנו היא לחבר אנשים עם האוכל שהם אוהבים, במקום שהם אוהבים, בזמן שהם אוהבים!</p>
-      
     </div>
   </footer>
 
-  <script src="scripts.js" defer></script>
+  <script src="{{ url_for('static', filename='js/HomePage.js') }}" defer></script>
 </body>
 </html>

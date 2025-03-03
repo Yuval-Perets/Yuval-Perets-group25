@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - הרשמת מסעדה</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/NewRestaurant.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+    </div>
+  </header>
+
+  <main class="restaurant-registration-container">
+    <div class="container">
+      <h1>הרשמת מסעדה</h1>
+      <form class="restaurant-form">
+        <label>
+          שם מסעדה
+          <input type="text" name="name" placeholder="הקלד את שם המסעדה" required>
+        </label>
+        <label>
+          סוג המטבח
+          <input type="text" name="cuisine" placeholder="הקלד את סוג המטבח" required>
+        </label>
+        <label>
+          מיקום
+          <input type="text" name="location" placeholder="הקלד את המיקום" required>
+        </label>
+        <label>
+          דירוג
+          <input type="number" name="rating" placeholder="הזן דירוג (0-5)" min="0" max="5" step="0.1" required>
+        </label>
+        <label>
+          כתובת תמונה (URL)
+          <input type="url" name="photo_url" placeholder="הכנס קישור לתמונה" required>
+        </label>
+        <button type="submit" class="btn primary">הרשם מסעדה</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h3>קצת עלינו</h3>
+      <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/NewRestaurant.js') }}" defer></script>
+</body>
+</html>
