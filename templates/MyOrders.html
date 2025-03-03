@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - ההזמנות שלי</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/MyOrders.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+      <div class="profile-actions">
+        <span>שלום, {{ user }}</span>
+        <button class="btn ghost" id="logout-btn">התנתק</button>
+      </div>
+    </div>
+  </header>
+  
+  <main class="orders-container">
+    <div class="container">
+      <h1>ההזמנות שלי</h1>
+      <div id="orders-list">
+        <!-- Orders will be dynamically inserted here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ... existing MyOrders.html content ... -->
+
+<div id="updateModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>עדכון הזמנה</h2>
+      <form id="updateOrderForm">
+        <input type="hidden" id="update-order-id" name="order_id">
+        <label for="update-date">תאריך:</label>
+        <input type="date" id="update-date" name="date" required>
+        <label for="update-time">שעה:</label>
+        <input type="time" id="update-time" name="time" required>
+        <label for="update-guests">מספר סועדים:</label>
+        <input type="number" id="update-guests" name="guests" required>
+        <label for="update-special">בקשות מיוחדות:</label>
+        <textarea id="update-special" name="special_requests"></textarea>
+        <button type="submit" class="btn primary">עדכן</button>
+      </form>
+    </div>
+  </div>
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <h3>קצת עלינו</h3>
+      <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה...</p>
+    </div>
+  </footer>
+  
+  <script src="{{ url_for('static', filename='js/MyOrders.js') }}" defer></script>
+</body>
+</html>

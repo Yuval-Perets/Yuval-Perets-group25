@@ -19,7 +19,8 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 2em;
+
 }
 
 .header {
@@ -102,6 +103,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
+  max-width: 388px;
 }
 
 .card .image-placeholder {
@@ -143,4 +145,13 @@ body {
   padding: 16px 0;
   text-align: center;
   border-top: 1px solid #ccc;
+}
+
+.user {
+  display: flex;
+  align-items: center;  
+}
+.restaurant-image {
+  width: 100%;
+  max-height: -webkit-fill-available;
 }

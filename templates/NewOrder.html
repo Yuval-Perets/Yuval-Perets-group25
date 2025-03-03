@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestEasy - הזמנה חדשה</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/NewOrder.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">RestEasy</div>
+      <div class="profile-actions">
+        <span>שלום, {{ user }}</span>
+        <button class="btn ghost" id="logout-btn">התנתק</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="reservation-container">
+    <div class="container">
+      <section class="restaurant-header">
+        <h1>{{ restaurant.name }}</h1>
+        <p>{{ restaurant.address or "כתובת לא זמינה" }}</p>
+      </section>
+
+      <div class="grid">
+        <section class="form-section">
+          <div class="card">
+            <h2>פרטי ההזמנה</h2>
+            <form method="post" action="{{ url_for('create_order') }}">
+              <!-- Hidden field to pass restaurant name -->
+              <input type="hidden" name="restaurant" value="{{ restaurant.name }}">
+              <label>
+                תאריך
+                <input type="date" name="date" style="direction: rtl; text-align: right;" required />
+              </label>
+              <label>
+                שעה
+                <input type="time" name="time" style="direction: rtl; text-align: right;" required />
+              </label>
+              <label>
+                מספר סועדים
+                <input type="number" name="guests" min="1" placeholder="בחר מספר סועדים" required />
+              </label>
+              <label>
+                בקשות מיוחדות
+                <textarea name="special_requests" placeholder="הוסף הערות או בקשות מיוחדות..."></textarea>
+              </label>
+              <button type="submit" class="btn primary">אשר הזמנה</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="info-section">
+          <div class="card">
+            <h2>פרטי המסעדה</h2>
+            <ul>
+              <li><strong>שעות פעילות:</strong> {{ restaurant.hours or "לא צוינו" }}</li>
+              <li><strong>טלפון:</strong> {{ restaurant.phone or "לא זמין" }}</li>
+              <li><strong>סוג מטבח:</strong> {{ restaurant.cuisine or "לא צויין" }}</li>
+              <li><strong>חניה:</strong> {{ restaurant.parking or "לא צויין" }}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h3>קצת עלינו</h3>
+      <p>ברוכים הבאים לאתר שלנו! אנחנו כאן כדי להפוך את חוויית ההזמנה למסעדות למהירה, קלה ונוחה. בעזרת הפלטפורמה שלנו תוכלו למצוא בקלות את המסעדה המושלמת, לבחור את הזמן שנוח לכם, ולהבטיח את המקום שלכם תוך שניות. המטרה שלנו היא לחבר אנשים עם האוכל שהם אוהבים, במקום שהם אוהבים, בזמן שהם אוהבים!</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/NewOrder.js') }}" defer></script>
+</body>
+</html>
